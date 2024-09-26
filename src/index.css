@@ -4,25 +4,56 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Teko', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+  background-image: url(./images/fidel-fernando-OKJlJn5smek-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.map {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 5px solid;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-box {
+  height: 40vh;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  background-color: #cccccc;
+  opacity: .7;
+  font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: -1000px;
+margin: -1000;
+}
+.address{
+  width: 40vw;
+}
+.home-logo {
+  height: 200px;
+  width: auto;
+}
+
+.home-button {
+  margin-top: 30px;
 }
 
 .map-container {
-  height: 100vh;
-  width: 100%;
+ 
+  height: 70vh;
+  width: 95%;
 }
  .link{
-  color: blue;
+  color: inherit;
  }
  .restaurant-name{
   font-weight: bold;
@@ -32,12 +63,10 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   /* justify-content: space-evenly; */
-  color: black;
+  color: white;
   align-self: auto;
   gap: 5px;
 }
-
-
 
 .button-56 {
   align-items: center;
@@ -45,11 +74,11 @@ code {
   border: 2px solid rgb(161, 161, 161);
   border-radius: 2px;
   box-sizing: border-box;
-  color: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
+  font-family: 'Teko', sans-serif;
+  font-size: 23px;
   height: 30px;
   justify-content: center;
   line-height: 24px;
@@ -81,7 +110,7 @@ code {
 
 .button-56:hover:after {
   transform: translate(0, 0);
-  
+
 }
 
 .button-56:active {
@@ -95,7 +124,7 @@ code {
 
 @media (min-width: 768px) {
   .button-56 {
-    padding: 0 40px;
+    padding: 3px 40px;
   }
 }
 
@@ -104,11 +133,15 @@ code {
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  
+  height: 70vh;
+
+
+
 }
 .home-button{
  display: flex;
  gap: 5px;
+
 }
 
 
@@ -150,5 +183,93 @@ justify-content: center;
 .text-gray-300{
   font-weight: 500;
   font-size: 15px;
-  border: 2px solid white;
+  color: white;
+
+}
+
+.wrapper {
+  max-width: 1350px;
+  padding: 0px 60px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.wrapper img {
+  cursor: pointer;
+}
+
+/* modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.541);
+  display: flex;
+  align-items: center;
+}
+
+.overlay img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.overlay>span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #ffffff;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.overlay-arrows_left {
+  display: flex;
+  background-color: #6d6d6d;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  z-index: 999;
+}
+
+.overlay-arrows_left svg {
+  width: 50px;
+  height: 50px;
+}
+
+.overlay-arrows_right svg {
+  width: 50px;
+  height: 50px;
+}
+
+.overlay-arrows_right {
+  display: flex;
+  background-color: #6d6d6d;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  z-index: 999;
+
+
+}
+.container{
+  color: rgb(43, 43, 43);
+  font-weight:bolder;
+  font-size: larger;
+  background-color: white;
+  opacity: .8;
 }
